@@ -2,188 +2,189 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>HTML Academy: Глейси</title>
   </head>
   <body>
     <header class="main-header">
-     <nav class="main-navigation">
-       <a class="main-header-logo.svg" width="111" height="24" alt="Логотип GllacyShop">
-       </a>
-       <ul class="site-navigation">
-         <li class="site-navigation-current"><a href="catalog.html">Каталог</a></li>
-         <li><a href="ship-and-pay.html">Доставка и оплата</a></li>
-         <li><a href="about-company.html">О компании</a></li>
+      <nav>
+        <a class="main-header_logo" href="index.html">
+          <img src="img/logo.svg" width="111" height="24" alt="Логотип GllacyShop">
+        </a>
+      <ul class="site-nav">
+        <li class="site-nav_current"><a href="#">Каталог</a></li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">О компании</a></li>
        </ul>
-       <ul class="user-navigation">
-         <li class="search">q</li>
-         <li class="login-link">Вход</li>
-         <li class="basket">2 товара</li>
-         <!--нет пока представления, как корзина делается-->
-       </ul>
-       <p>
+      <ul class="user-nav">
+        <li class="user-nav_search">q</li>
+        <li class="user-nav_login">Вход</li>
+        <li class="user-nav_basket">2 товара</li>
+      </ul>
+      <p>
         С 10 до 20, ежедневно<br>
         8 812 450-25-25
-       </p>
-     </nav>
-     </header>
+      </p>
+      </nav>
+    </header>
+
     <main class="container">
-      <h1 class="page-title"></h1>
+      <h1></h1>
       <ul class="breadcrums">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li class="breadcrums-current">Сливочное</li>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li class="breadcrums_current">Сливочное</li>
       </ul>
 
       <section class="filters">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
-      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form class="filters_filter-1" method="get" action="https://echo.htmlacademy.ru">
+            <label for="sorting">Сортировка</label> 
+              <select>
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            
+            <label for="rating">Цена: 100 руб. - 500 руб.</label>
+            <!--ждем скринкаст-->
+            <input type="range" name="rating" min="100" max="500" step="50" id="rating" value="150">
+          
+          <fieldset>
+            <legend>Жирность:</legend>
+              <ul>
+                <li class="filters_filter-2">
+                  <input class="visually-hidden filters_filter-2_input-radio" type="radio" name="zero" value="0">
+                    0%
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-2_input-radio" type="radio" name="before-ten" value="to-10" checked>
+                    до 10%
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-2_input-radio" type="radio" name="before-thirty" value="to-30">
+                    до 30%
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-2_input-radio" type="radio" name="up-thirdy" value="up-30">
+                    выше 30%
+                </li>
+              </ul>
+          </fieldset>
 
-        <label for="sorting">Сортировка</label> 
-          <select>
-            <option>по популярности</option>
-            <option>сначала недорогие</option>
-            <option>сначала дорогие</option>
-            <option>по жирности</option>
-          </select>
-
-        <label for="rating">Цена: 100 руб. - 500 руб.</label>
-          <input type="range" name="rating" min="100" max="500" step="50" id="rating" value="150">
-          <!--Как я поняла, двойной ползунок делается в CSS с прописание начальной точки и конечной-->
-        
-        <fieldset>
-        <legend>Жирность:</legend>
-        <ul>
-          <li class="filter-option">
-          <input class="visually-hidden filter-input filter-input-radio" type="radio" name="zero" value="0">
-          0%
-          </li>
-          <li class="filter-option">
-          <input class="visually-hidden filter-input filter-input-radio" type="radio" name="before-ten" value="to-10" checked>
-          до 10%
-          </li>
-          <li class="filter-option">
-          <input class="visually-hidden filter-input filter-input-radio" type="radio" name="before-thirty" value="to-30">
-          до 30%
-          </li>
-          <li class="filter-option">
-          <input class="visually-hidden filter-input filter-input-radio" type="radio" name="up-thirdy" value="up-30">
-          выше 30%
-          </li>
-        </ul>
-        </fieldset>
-
-        <fieldset>
-        <legend>Наполнители:</legend>
-          <ul>
-            <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" checked>
-              шоколадные
-            </li>
-            <li class="filter-option">
-               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar-crums" checked>
-              сахарные присыпки
-            </li>
-            <li class="filter-option">
-               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruits">
-              фрукты
-            </li>
-            <li class="filter-option">
-               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sirups">
-              сиропы
-            </li>
-            <li class="filter-option">
-               <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jams">
-              джемы
-            </li>
-          </ul>
-      </fieldset>
-
-      <button type="submit" class="filter-button button">Применить</button>
-      </form>
+          <fieldset>
+            <legend>Наполнители:</legend>
+              <ul>
+                <li class="filters_filter-3">
+                  <input class="visually-hidden filters_filter-3_checkbox" type="checkbox" name="chocolate" checked>
+                    шоколадные
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-3_checkbox" type="checkbox" name="sugar-crums" checked>
+                    сахарные присыпки
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-3_checkbox" type="checkbox" name="fruits">
+                    фрукты
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-3_checkbox" type="checkbox" name="sirups">
+                    сиропы
+                </li>
+                <li class="filter-option">
+                  <input class="visually-hidden filters_filter-3_checkbox" type="checkbox" name="jams">
+                    джемы
+                </li>
+              </ul>
+          </fieldset>
+          <button type="submit" class="filters_filter-3_button">Применить</button>
+          </form>
       </section>
 
-      <section class="catalog">
-         <h2 class="visually-hidden">Список мороженого</h2>
-           <ul class="catalog-list">
-             <li class="catalog-item">
-               <h4>
-                 <a href="catalog-item.html">
-                   <span class="catalog-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
-                 </a>
-               </h4>
-                 <p class="catalog-item-image">
-                 <a href="catalog-item.html">
-                   <img src="img/bestseller.jpg" width="50" height="50" alt="Хит">
-                   <img src="img/product-1.jpg" width="220" height="165" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                 </a>
-                 </p>
-                 <p class="catalog-item-price">
-                 <span>ХИТ</span><!--на вебинаре говорилось, что это и картинка и спан, не совсем разобралась, поэто есть и то, и другое-->
-                 <b>310ք/<span>кг</span></b><!--в ps цена, руб и хит это отдельные картинки, может быть следует сделать и здесь img-->
-                 </p>
-             </li>
+            <section class="list">
+        <h2 class="visually-hidden">Список мороженого</h2>
+           <ul class="list_item">
+             <li class="list_item-1">
+        <h4>
+          <a href="list_item-1.html">
+            <span class="list_item-1_title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+          </a>
+        </h4>
+          <p class="list_item-1_image">
+            <a href="list_item-1_image.html">
+              <img src="img/bestseller.jpg" width="50" height="50" alt="Хит">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            </a>
+          </p>
+
+          <p class="catalog-item-price">
+            <span>ХИТ</span>
+            <b>310ք/<span>кг</span></b>
+          </p>
+            </li>
            </ul>
            <!--сделала только одно мороженое, потому как остальные по аналогии и нужно подправить код всего одного-->
-       </section>
+      </section>
      
-        <span><</span>
-        <ul class="paginatio-list">
-          <li class="paginatio-item paginatio-item-current"><a>1</a></li>
-          <li class="paginatio-item"><a href="#">2</a></li>
-          <li class="paginatio-item"><a href="#">3</a></li>
-          <li class="paginatio-item"><a href="#">4</a></li>
-          <li class="paginatio-item"><a href="#">5</a></li>
-        </ul>
-        <span>></span>
-      
+      <span><</span>
+      <ul class="pag-list">
+        <li class="pag-list_item pag-list_item_current"><a>1</a></li>
+        <li class="pag-list_item"><a href="#">2</a></li>
+        <li class="pag-list_item"><a href="#">3</a></li>
+        <li class="pag-list_item"><a href="#">4</a></li>
+        <li class="pag-list_item"><a href="#">5</a></li>
+      </ul>
+      <span>></span>
     </main>
 
-    <footer>
-       <div class="footer-social">
-           <ul>
-             <li><a class="social-button" href="#">Твиттер</a></li>
-             <li><a class="social-button" href="#">Инстаграм</a></li>
-             <li><a class="social-button" href="#">Фейсбук</a></li>
-             <li><a class="social-button" href="#">Вконтакте</a></li>
-           </ul>
-       </div>
-            <ul class="footer-other">
-              <li><a href="for-shippers.html">Для поставщиков</a></li>
-              <!--добавить красное сердечко-->
-              <li><a href="about-produce.html">О производстве</a></li>
-              <li><a href="our-documents.html">Наши документы</a></li>
-              <li><a href="ecology-standarts.html">Экологиеские стандарты</a></li>
-            </ul>
+     <footer>
+      <div class="footer-sc">
+        <ul>
+          <li><a class="footer-sc_button-1" href="#">Твиттер</a></li>
+          <li><a class="footer-sc_button-2" href="#">Инстаграм</a></li>
+          <li><a class="footer-sc_button-3" href="#">Фейсбук</a></li>
+          <li><a class="footer-sc_button-4" href="#">Вконтакте</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-other">
+        <ul>
+          <li><a href="#">Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологиеские стандарты</a></li>
+        </ul>
         <p class="footer-copyright">
-           <b>Сделано в <a class="button" href="https://htmlacademy.ru">HTML Academy</a> @ 2017</b>
+          <b>Сделано в <a class="footer-copyright_button" href="https://htmlacademy.ru">HTML Academy</a> @ 2017</b>
         </p>
     </footer>
 
-   <section class="modal modal-login">
-   <h2 class="visually-hidden">Личный кабинет</h2>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-   <p>
-    <input class="login-icon-user" type="text" name="email" placeholder="Электронная почта">
-   </p>
-   <p>
-     <input class="login-icon-password" type="password" name="password" placeholder="Пароль">
-   </p>
-   <p class="login-password-info">
-     <a class="restore" href="#">Забыли пароль?</a>
-     <a class="new-registration" href="#">Новая регистрация</a>
-  </p>
-     <button class="button" type="submit">Войти</button>
-     </form>
-  
-   <section class="modal modal-search">
-        <p>
-          <input class="search" type="text" name="search" placeholder="Что ищем?">
-          <!--в онлайн-курсе мы не разбирали строку поиска - ни в кексби, ни в кваст, поэтому пока так -->
-        </p>
-   </section>
+      <section>
+        <h2 class="visually-hidden">Личный кабинет</h2>
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <input class="login-form_email" type="text" name="email" placeholder="Электронная почта">
+            </p>
+            <p>
+              <input class="login-form_password" type="password" name="password" placeholder="Пароль">
+            </p>
+            <p class="login-form_info">
+              <a class="login-form_restore" href="#">Забыли пароль?</a>
+              <a class="login-form_new-reg" href="#">Новая регистрация</a>
+            </p>
+            <button class="login-form_button" type="submit">Войти</button>
+          </form>
+      </section>
 
-   <section class="modal modal-basket">
-     <h2 class="visually-hidden">Корзина</h2>
+     <section class="search-form">
+     <!--ждем скринкаст-->
+      <p>
+        <input class="" type="text" name="search" placeholder="Что ищем?">
+      </p>
+     </section>
+
+     <section class="form-basket">
+      <h2 class="visually-hidden">Корзина</h2>
         <table class="basket-items">
           <tr class="visually-hidden">
             <th>x</th>
@@ -193,32 +194,29 @@
             <th>сумма</th>
           </tr>
           <tr>
-            <td class="item-delete">x</td>
-            <td class="item-image"><img src="#"></td>
-            <td class="item-name">Пломбир с апельсиновым джемом</td>
-            <td class="item-weight-price">1,5 кгх200 руб.</td>
-            <td class="item-cost">300 руб.</td>
+            <td class="basket-items_item-delete">x</td>
+            <td class="basket-items_item-image"><img src="#"></td>
+            <td class="basket-items_item-name">Пломбир с апельсиновым джемом</td>
+            <td class="basket-items_item-weight-price">1,5 кгх200 руб.</td>
+            <td class="basket-items_item-cost">300 руб.</td>
           </tr>
-           <tr>
-            <td class="item-delete">x</td>
-            <td class="item-image"><img src="#"></td>
-            <td class="item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
-            <td class="item-weight-price">1,5 кгх300 руб.</td>
-            <td class="item-cost">450 руб.</td>
+          <tr>
+            <td class="basket-items_item-delete">x</td>
+            <td class="basket-items_item-image"><img src="#"></td>
+            <td class="basket-items_item-name">Клубничный пломбир с присыпкой из белого шоколада</td>
+            <td class="basket-items_item-weight-price">1,5 кгх300 руб.</td>
+            <td class="basket-items_item-cost">450 руб.</td>
           </tr>
-           <tr>
-            <td class="item-delete"></td>
-            <td class="item-image"></td>
-            <td class="item-name"></td>
-            <td class="item-weight-price">/td>
-            <td class="item-sum">Итого: 750 руб.</td>
+          <tr>
+            <td class="basket-items_item-delete"></td>
+            <td class="basket-items_item-image"></td>
+            <td class="basket-items_item-name"></td>
+            <td class="basket-items_item-weight-price">/td>
+            <td class="basket-items_item-sum">Итого: 750 руб.</td>
           </tr>
         </table>
-        </section>
-        <button class="button" type="submit">Оформить заказ</button>
-          <!--нет пока представления, как корзина выглядит - либо таблица, либо список, либо прописывается с помощью отдельного скрипта-->
-   </section>
+    </section>
+      <button class="basket-items_button" type="submit">Оформить заказ</button>
 
   </body>
 </html>
-<!--не знаю, как сделать выделение опреденного пломбира, но сначала нужно сверстать сам каталог товаров-->
