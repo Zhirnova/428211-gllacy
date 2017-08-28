@@ -1,0 +1,23 @@
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #323232;
+	font-weight: bold;
+}
+
+.banner h1 {
+	font-family: "Roboto", sans-serif;
+	font-size: 60px;
+	line-height: 24px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.free-sweets h2 {
+    font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #323232;
+	font-weight: bold;
+ }

@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -15,11 +16,18 @@
          <li><a href="#">Доставка и оплата</a></li>
          <li><a href="#">О компании</a></li>
       </ul>
+        
+      <button class="user-nav_search" type="button">Поиск</button>
       <ul class="user-nav">
-         <li class="user-nav_search">q</li>
-         <li class="user-nav_login">Вход</li>
-         <li class="user-nav_basket">$$</li>
+         <li class="user-nav_login">
+          <a class="user-nav_login" href="login.html">Вход</a> 
+         </li>
+
+         <li class="user-nav_basket">
+          <a class="user-nav_basket" href="basket.html">Корзина</a>
+         </li>
       </ul>
+
       <p>
         С 10 до 20, ежедневно<br>
        	8 812 450-25-25
@@ -29,14 +37,26 @@
 
     <main class="container">
     <!--ждем скринкаста-->
-      <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-        <a class="container_button" href="#">Давайте оба!</a>
+      <section class="banner">
+        <h1 class="banner_1">Крем-брюле и пломбир с малиновым джемом</h1>
+          <img src="img/icecream-1.jpg" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+      </section>
 
-      <ul class="pag-list">
-         <li class="pag-list_item pag-list_item-current""><a></a></li>
-         <li class="pag-list_item"><a href="#"></a></li>
-         <li class="pag-list_item"><a href="#"></a></li>
-      </ul>
+      <section class="banner">
+        <h1 class="banner_2">Шоколадный пломбир и лимонный сорбет</h1>
+          <img src="img/icecream-2.jpg" width="1045" height="881" alt="Шоколадный пломбир и лимонный сорбет">
+      </section>
+
+      <section class="banner">
+        <h1 class="banner_3">Пломбир с помадкой и клубничный щербет</h1>
+          <img src="img/icecream-3.jpg" width="1045" height="881" alt="Пломбир с помадкой и клубничный щербет">
+      </section>
+      
+        <a class="banner_button" href="#">Давайте оба!</a>
+
+         <button class="banner_button pag-button-1 visually-hidden">1</button>
+         <button class="banner_button pag-button-2 visually-hidden">2</button>
+         <button class="banner_button pag-button-3 visually-hidden">3</button>
       
       <section class="free-sweets">
       <!--ждем скринкаста-->
@@ -59,13 +79,12 @@
         </h4>
           <p class="list_item-1_image">
             <a href="list_item-1_image.html">
-              <img src="img/bestseller.jpg" width="50" height="50" alt="Хит">
-              <img src="img/product-1.jpg" width="220" height="165" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <img src="img/hit.svg" width="50" height="50" alt="Хит">
+              <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             </a>
           </p>
 
           <p class="catalog-item-price">
-            <span>ХИТ</span>
             <b>310ք/<span>кг</span></b>
           </p>
             </li>
@@ -102,23 +121,28 @@
 
       <section class="subscript">
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <input type="text" name="email" value="" placeholder="Электронная почта">
+          <label class="visually-hidden" for="subscript_email">Электронная почта</label>
+          <input class="subscript_email" type="text" name="email" value="" placeholder="Электронная почта">
           <button class="subscript_button" type="submit">Отправить</button>
       </section>
 
-      <section class="map">.
-       <a href="map.html"></a>
+      <section class="map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+          <p>
+            <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн магазина: ул.Большая Конюшенная 19/8, Санкт-Петербург">
+            
+          </p>
       </section>
 
       <section class="feedback">
-        <p class="contacts">
+        <p class="feedback_contacts">
           Адрес главного офиса и офлайн магазина:
           <span>ул.Большая Конюшенная<br>
           19/8, Санкт-Петербург</span><br>
           Для заказов по телефону:<br>
           <span>8 812 450-25-25</span><br>
           (с 10 до 20 ежедневно)
-          <a class="button contacts-button" href="contacts.html">Форма обратной связи</a>
+          <button class="feedback_button" type="button">Форма обратной связи</button>
       </section>
     </main>
 
@@ -148,16 +172,18 @@
         <h2 class="visually-hidden">Личный кабинет</h2>
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-              <input class="login-form_email" type="text" name="email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="login-form_email">Электронная почта</label>
+                <input class="login-form_email" type="text" name="email" placeholder="Электронная почта">
             </p>
             <p>
-              <input class="login-form_password" type="password" name="password" placeholder="Пароль">
+              <label class="visually-hidden" for="login-form_password">Пароль</label>
+                <input class="login-form_password" type="password" name="password" placeholder="Пароль">
             </p>
             <p class="login-form_info">
               <a class="login-form_restore" href="#">Забыли пароль?</a>
               <a class="login-form_new-reg" href="#">Новая регистрация</a>
             </p>
-            <button class="login-form_button" type="submit">Войти</button>
+            <button class="login-form_button" type="button">Войти</button>
           </form>
       </section>
 
@@ -175,22 +201,25 @@
       <h2>Мы обязательно вам ответим!</h2>
         <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
           <p>
-            <input class="form-feedback_name" type="text" name="name" placeholder="Как вас зовут?">
+            <label class="visually-hidden" for="form-feedback_name">Как вас зовут?</label>
+              <input class="form-feedback_name" type="text" name="name" placeholder="Как вас зовут?">
           </p>
           <p>
-            <input class="form-feedback_email" type="text" name="email" placeholder="Ваша почта для ответа?">
+            <label class="visually-hidden" for="form-feedback_email">Ваша почта для ответа?</label>
+              <input class="form-feedback_email" type="text" name="email" placeholder="Ваша почта для ответа?">
           </p>
           <p>
             <textarea rows="5" cols="45" placeholder="Напишите что-нибудь..."></textarea>
           </p>
             <button class="form-feedback_button" type="submit">Отправить</button>
         </form>
-        <span class="form-feedback_close">x</span>
+          <button class="form-feedback_close" type="button">Закрыть</button>
      </section>
 
      <section class="search-form">
       <p>
-        <input class="" type="text" name="search" placeholder="Что ищем?">
+        <label class="visually-hidden" for="search-form">Поиск</label>
+          <input class="search-form" type="text" name="search" placeholder="Что ищем?">
       </p>
      </section>
 
