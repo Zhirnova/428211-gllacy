@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link href="css/normolize.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
 
@@ -34,7 +34,8 @@
       </ul>
 
       <ul class="user-nav">
-          <button class="user-nav_search" type="button">Поиск</button>
+          <li><button class="user-nav_search" type="button">Поиск</button>
+          </li>
           <li class="user-nav_login">
             <a class="user-nav_login" href="login.html">Вход</a> 
           </li>
@@ -65,10 +66,11 @@
 
       <section class="filters">
 
-        <div class="block_1">
+        
         <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form class="filters_filter-1" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <form method="get" action="https://echo.htmlacademy.ru">
+          <div class="block1">
+          <fieldset class="filters_filter-1">
             <legend>Сортировка</legend>
               <select class="sort">
                 <option>по популярности</option>
@@ -77,6 +79,7 @@
                 <option>по жирности</option>
               </select>
           </fieldset>
+          
 
           <fieldset>           
             <legend>Цена: 100 руб. - 500 руб.</legend>
@@ -87,7 +90,7 @@
           
           <fieldset>
             <legend>Жирность:</legend>
-              <ul>
+              <ul class="fat-list">
                 <li class="filters_filter-3">
                   <input class="visually-hidden filters_filter-3_input-radio" type="radio" name="fat" value="0" id="filter-0" disabled="">
                     <label for="filter-0">0%</label>
@@ -111,7 +114,7 @@
           <div class="block2">
           <fieldset>
             <legend>Наполнители:</legend>
-              <ul>
+              <ul class="crumbs-list">
                 <li class="filters_filter-4">
                   <input class="visually-hidden filters_filter-4_checkbox" type="checkbox" name="chocolate" id="filter-chocolate" checked>
                     <label for="filter-chocolate">шоколадные</label>
@@ -133,11 +136,14 @@
                     <label for="filter-jams">джемы</label>
                 </li>
               </ul>
+
           </fieldset>
-          <button type="submit" class="filters_filter-4_button button">Применить</button>
+            <button type="submit" class="filters_filter-4_button button">Применить</button>
+          </div>
+
+        
           </form>
       </section>
-      </div>
 
       <section class="list">
         <h2 class="visually-hidden">Список мороженого</h2>
@@ -156,7 +162,7 @@
                   <b>310<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-1_title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
+                  <span class="list_item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -174,7 +180,7 @@
                   <b>380<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-2_title">Сливочно-кофейное с кусочками шоколада</span>
+                  <span class="list_item-title">Сливочно-кофейное с кусочками шоколада</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -192,7 +198,7 @@
                   <b>355<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-3_title">Сливочно-клубничное с присыпкой из белого шоколада</span>
+                  <span class="list_item-title">Сливочно-клубничное с присыпкой из белого шоколада</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -210,7 +216,7 @@
                   <b>415<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-4_title">Сливочное крем-брюле с карамельной подливкой</span>
+                  <span class="list_item-title">Сливочное крем-брюле с карамельной подливкой</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -228,7 +234,7 @@
                   <b>325<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-5_title">Сливочное с брусничным джемом</span>
+                  <span class="list_item-title">Сливочное с брусничным джемом</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -246,7 +252,7 @@
                   <b>410<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-6_title">Сливочно-черничное с цельными ягодами черники</span>
+                  <span class="list_item-title">Сливочно-черничное с цельными ягодами черники</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -264,7 +270,7 @@
                   <b>375<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-7_title">Сливочно-лимонное с карамельной присыпкой</span>
+                  <span class="list_item-title">Сливочно-лимонное с карамельной присыпкой</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -282,7 +288,7 @@
                   <b>320<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-8_title">Сливочное с шоколадной стружкой</span>
+                  <span class="list_item-title">Сливочное с шоколадной стружкой</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -300,7 +306,7 @@
                   <b>440<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-9_title">Сливочно-ванильное с кусочками шоколада</span>
+                  <span class="list_item-title">Сливочно-ванильное с кусочками шоколада</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -318,7 +324,7 @@
                   <b>435<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-10_title">Сливочное с ментоловым сиропом</span>
+                  <span class="list_item-title">Сливочное с ментоловым сиропом</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -336,7 +342,7 @@
                   <b>355<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-11_title">Сливочное с кусочками черного шоколада</span>
+                  <span class="list_item-title">Сливочное с кусочками черного шоколада</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
@@ -354,7 +360,7 @@
                   <b>420<img src="img/ruble.svg" width="45" height="45" alt="ք"><span>/кг</span></b>
                 </p>
                 <p>
-                  <span class="list_item-12_title">Сливочное с мятным сиропом</span>
+                  <span class="list_item-title">Сливочное с мятным сиропом</span>
                 </p>
                 <button class="button visually-hidden">Быстрый просмотр</button>
             </li>
