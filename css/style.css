@@ -646,7 +646,7 @@ input[type="radio"].visually-hidden {
     border: none;
     margin: 0;
     padding: 0;
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .filters legend {
@@ -695,7 +695,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-wrapper select {
-    padding: 8px 46px 9px 12px;
+    padding: 9px 42px 9px 17px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
@@ -1314,8 +1314,8 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: 38px;
-    margin-bottom: 39px;
+    margin-top: 44px;
+    margin-bottom: 38px;
 }
 
 .pagination-list li {
@@ -1672,15 +1672,17 @@ input[type="radio"].visually-hidden {
     color: #ffbc9e;
 }
 
-.user-btn:hover .modal {
-    display: block;
-}
 
 .modal {
     display: none;
     position: absolute;
     z-index: 2;
 }
+
+.modal-show {
+    display: block;
+}
+
 
 .modal-search form {
     background: #f8f7f4;
