@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -59,11 +59,11 @@
             <section class="modal modal-login">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="placeholder">
-                  <input type="email" name="email-enter" id="email-enter" placeholder="Электронная почта" required>
+                  <input type="email" name="email-enter" id="email-enter" placeholder="Электронная почта">
                   <label for="email-enter">Электронная почта</label>
                 </div>
                 <div class="placeholder">
-                  <input type="password" name="password" id="password-enter" placeholder="Пароль" required>
+                  <input type="password" name="password" id="password-enter" placeholder="Пароль">
                   <label for="password-enter">Пароль</label>
                 </div>
               <button class="btn" type="submit" name="enter">Войти</button>
@@ -170,7 +170,7 @@
         </div>
       </section>
       <section class="features">
-        <h3>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
+        <h3>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
           <ul class="feature-list">
             <li class="feature-item ice-cream">
               <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
@@ -202,17 +202,20 @@
                 </form>
           </article>
       </article>
-      <div class="map pin">
+      <div class="map">
+        <iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/-/CBaJiYdgpC"></iframe>
+        <div class="map-wrapper">
         <h2 class="visually-hidden">Как до нас добраться</h2>
           <section class="map-form">
-            <p class="adress-part1">Адрес главного офиса и офлайн магазина:</p>
+            <p class="adress-part1">Адрес главного офиса и офлайн- магазина:</p>
             <b class="adress-part2" >ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
             <p class="phone-part1">Для заказов по телефону:</p>
             <b class="phone-part2">8 812 450-25-25</b>
             <p class="time-part">(с 10 до 20 ежедневно)</p>
             <a class="btn map-btn" href="feedback.html">Форма обратной связи</a>
           </section>
-          <section class="modal-feedback">
+          </div>
+          <section class="modal modal-feedback">
               <p>Мы обязательно вам ответим!</p>
                 <button class="modal-close">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
@@ -235,7 +238,6 @@
                 </div>
               </form>
           </section>
-          <img src="img/map.jpg" width="1200" height="430" alt="Адрес главного офиса и офлайн магазина: ул.Большая Конюшенная 19/8, Санкт-Петербург">
       </div>
     </main>
     <footer class="footer-wrapper">
@@ -280,17 +282,6 @@
     </footer>
     </div>
     </div>
-
-  <script>
-    var link = document.querySelector(".login-link");
-    var popup = document.querySelector(".modal-login");
-    
-    link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal-show");
-    }); 
-    
-  </script>
-
+  <script src="js/modal.min.js"></script>
   </body>
 </html>                            
