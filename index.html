@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <input type="radio" id="btn-1" name="toggle" checked>
@@ -59,11 +59,11 @@
             <section class="modal modal-login">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <div class="placeholder">
-                  <input type="email" name="email-enter" id="email-enter" placeholder="Электронная почта">
+                  <input type="email" name="email-enter" id="email-enter" placeholder="Электронная почта" required>
                   <label for="email-enter">Электронная почта</label>
                 </div>
                 <div class="placeholder">
-                  <input type="password" name="password" id="password-enter" placeholder="Пароль">
+                  <input type="password" name="password" id="password-enter" placeholder="Пароль" required>
                   <label for="password-enter">Пароль</label>
                 </div>
               <button class="btn" type="submit" name="enter">Войти</button>

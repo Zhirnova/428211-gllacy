@@ -39,7 +39,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper {
-    min-width: 940px;
+    min-width: 1254px;
     background-color: #849d8f;
     background-image: url("../img/slide1.png");
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ input[type="radio"].visually-hidden {
 }
 
 .content-wrapper {
-    min-width: 1146px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
 }
@@ -206,9 +206,9 @@ input[type="radio"].visually-hidden {
 
 .site-navigation .site-item {
     display: inline-block;
-    max-width: 142px;
     vertical-align: top;
     margin-right: 28px;
+    margin-bottom: 20px;
 }
 
 .site-item .site-link {
@@ -252,11 +252,10 @@ input[type="radio"].visually-hidden {
 .site-navigation .sub-menu {
     display: none;
     position: absolute;
-    top: 55px;
-    left: 260px;
+    top: 61px;
     margin: 0;
+    margin-left: -21px;
     padding: 0;
-    padding-top: 5px;
     min-width: 143px;
     list-style: none;
     z-index: 2;
@@ -361,6 +360,7 @@ input[type="radio"].visually-hidden {
     max-height: 32px;
     border-radius: 30px;
     margin-right: 12px;
+    margin-bottom: 20px;
 }
 
 .user-btn a:hover,
@@ -564,6 +564,12 @@ input[type="radio"].visually-hidden {
 #btn-2:checked ~ .site-wrapper #slide2,
 #btn-3:checked ~ .site-wrapper #slide3 {
     display: block;
+}
+
+#btn-1:hover ~ .site-wrapper label[for="btn-1"],
+#btn-2:hover ~ .site-wrapper label[for="btn-2"],
+#btn-3:hover ~ .site-wrapper label[for="btn-3"] {
+    background-color: #b2c1b7;
 }
 
 #btn-1:checked ~ .site-wrapper label[for="btn-1"],
@@ -1043,6 +1049,10 @@ input[type="radio"].visually-hidden {
     padding-right: 13px;
     padding-top: 6px;
     padding-bottom: 73px;
+}
+
+.inner .product-item:hover {
+    margin-bottom: -58px;
 }
 
 .product-item:hover .hidden {
