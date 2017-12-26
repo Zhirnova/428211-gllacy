@@ -1,7 +1,6 @@
 ﻿# Личный проект «Глейси»
 
-* Студент: [Ирина Жирнова](https://up.htmlacademy.ru/htmlcss/18/user/428211).
-* Наставник: нет
+* Студент: [Ирина Жирнова](https://up.htmlacademy.ru/htmlcss/18/user/428211)
 
 ---
 
